@@ -1,0 +1,16 @@
+G:\C#\RandomTask\bin\Debug\RandomTask.exe.config
+G:\C#\RandomTask\bin\Debug\RandomTask.exe
+G:\C#\RandomTask\bin\Debug\RandomTask.pdb
+G:\C#\RandomTask\obj\Debug\MainWindow.g.cs
+G:\C#\RandomTask\obj\Debug\App.g.cs
+G:\C#\RandomTask\obj\Debug\RandomTask_MarkupCompile.cache
+G:\C#\RandomTask\obj\Debug\RandomTask_MarkupCompile.lref
+G:\C#\RandomTask\obj\Debug\MainWindow.baml
+G:\C#\RandomTask\obj\Debug\RandomTask.g.resources
+G:\C#\RandomTask\obj\Debug\RandomTask.Properties.Resources.resources
+G:\C#\RandomTask\obj\Debug\RandomTask.csproj.GenerateResource.cache
+G:\C#\RandomTask\obj\Debug\RandomTask.csproj.CoreCompileInputs.cache
+G:\C#\RandomTask\obj\Debug\RandomTask.exe
+G:\C#\RandomTask\obj\Debug\RandomTask.pdb
+G:\C#\RandomTask\obj\Debug\RandomTask.csproj.AssemblyReference.cache
+G:\C#\RandomTask\obj\Debug\RandomTask.csproj.SuggestedBindingRedirects.cache

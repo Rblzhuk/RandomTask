@@ -1,0 +1,124 @@
+﻿<Window x:Class="RandomTask.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RandomTask"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="1000" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DockPanel>
+            <DockPanel DockPanel.Dock="Top">
+
+            </DockPanel>
+            <DockPanel DockPanel.Dock="Bottom">
+
+            </DockPanel>
+            <DockPanel DockPanel.Dock="Right">
+
+            </DockPanel>
+            <DockPanel DockPanel.Dock="Left">
+
+            </DockPanel>
+            <DockPanel >
+                <DockPanel DockPanel.Dock="Top"></DockPanel>
+                <DockPanel DockPanel.Dock="Left"></DockPanel>
+                <DockPanel DockPanel.Dock="Right"></DockPanel>
+                <DockPanel DockPanel.Dock="Bottom"></DockPanel>
+                
+                <DockPanel>
+
+                    <DockPanel DockPanel.Dock="Top">
+                        <StackPanel HorizontalAlignment="Center">
+                            <Label>Ввод данных</Label>
+                        </StackPanel>
+                    </DockPanel>
+                    <DockPanel DockPanel.Dock="Top" Margin="0,10,0,10">
+                        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                            <Label Margin="0,0,10,0">Способ введения данных:</Label>
+                            <ComboBox x:Name="typeWriteDataComboBox" SelectedIndex="0" SelectionChanged="typeWriteDataComboBox_SelectionChanged">
+                                <TextBlock>Вручную</TextBlock>
+                                <TextBlock>Задать диапазон</TextBlock>
+                            </ComboBox>
+                        </StackPanel>
+                    </DockPanel>
+                    <DockPanel x:Name="taskTypeDP" DockPanel.Dock="Top" Margin="0,10,0,10">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Label>Тип задачи</Label>
+                            <ComboBox x:Name="taskTypeC" SelectedIndex="0">
+                                <TextBlock>Найти результат задачи (найти ответ)</TextBlock>
+                                <TextBlock>Найти значение аргумента задачи (найти х)</TextBlock>
+                            </ComboBox>
+                        </StackPanel>
+                    </DockPanel>
+                    <DockPanel x:Name="numericArgumentsDP" DockPanel.Dock="Top" Margin="0,10,0,10">
+                        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                            <Label Margin="0,0,10,0">Левый аргумент</Label>
+                            <TextBox x:Name="leftHandArg" Width="75"></TextBox>
+                            <Rectangle Width="50"></Rectangle>
+                            <Label Margin="0,0,10,0">Операция</Label>
+                            <ComboBox x:Name="typeHandOperationC" SelectedIndex="0">
+                                <TextBlock>Сложение</TextBlock>
+                                <TextBlock>Вычитание</TextBlock>
+                                <TextBlock>Умножение</TextBlock>
+                                <TextBlock>Деление</TextBlock>
+                            </ComboBox>
+                            <Rectangle Width="50"></Rectangle>
+                            <Label Margin="0,0,10,0">Правый аргумент</Label>
+                            <TextBox x:Name="rightHandArg" Width="75"></TextBox>
+                        </StackPanel>
+                    </DockPanel>
+                    <DockPanel x:Name="rangeArgumentsDP" DockPanel.Dock="Top" Height="0">
+                        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                            <Label Margin="0,0,10,0">Лев. мин.</Label>
+                            <TextBox x:Name="leftMinArg" Width="60"></TextBox>
+                            <Rectangle Width="10"></Rectangle>
+                            <Label Margin="0,0,10,0">Лев. макс.</Label>
+                            <TextBox x:Name="leftMaxArg" Width="60"></TextBox>
+                            <Rectangle Width="25"></Rectangle>
+                            <Label Margin="0,0,10,0">Операция</Label>
+                            <ComboBox x:Name="typeRangeOperationC" SelectedIndex="0">
+                                <TextBlock>Сложение</TextBlock>
+                                <TextBlock>Вычитание</TextBlock>
+                                <TextBlock>Умножение</TextBlock>
+                                <TextBlock>Деление</TextBlock>
+                            </ComboBox>
+                            <Rectangle Width="25"></Rectangle>
+                            <Label Margin="0,0,10,0">Прав. мин.</Label>
+                            <TextBox x:Name="rightMinArg" Width="60"></TextBox>
+                            <Rectangle Width="10"></Rectangle>
+                            <Label Margin="0,0,10,0">Прав. макс.</Label>
+                            <TextBox x:Name="rightMaxArg" Width="60"></TextBox>
+                        </StackPanel>
+                    </DockPanel>
+                    <DockPanel DockPanel.Dock="Top" Margin="0,10,0,10">
+                        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                            <Button x:Name="createTaskB" Height="26" Width="150" Click="createTaskB_Click">
+                                Создать задачу
+                            </Button>
+                        </StackPanel>
+                    </DockPanel>
+                    <DockPanel DockPanel.Dock="Top">
+                        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                            <Label FontSize="26" Margin="0,0,10,0">
+                                Сгенерированная задача
+                            </Label>
+                            <Label HorizontalAlignment="Center" FontSize="32" x:Name="taskResultL"></Label>
+                        </StackPanel>
+                    </DockPanel>
+
+                    <DockPanel DockPanel.Dock="Top">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Button x:Name="cleareAllTextFieldsB" Margin="0,0,10,0" Click="cleareAllTextFieldsB_Click">Очистить поля</Button>
+                            <Button x:Name="copyResultB" Margin="0,0,10,0" Click="copyResultB_Click">Скопировать пример</Button>
+                            <Button x:Name="getFullTaskB" Height="26" Width="150" Margin="0,0,10,0" Click="getFullTaskB_Click" >Узнать ответ</Button>
+                            <Label FontSize="18" x:Name="fullTaskL"></Label>
+                        </StackPanel>
+                    </DockPanel>
+                    <DockPanel></DockPanel>
+                </DockPanel>
+                
+            </DockPanel>
+        </DockPanel>
+    </Grid>
+</Window>
